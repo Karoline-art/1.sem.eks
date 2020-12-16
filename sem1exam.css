@@ -1,0 +1,329 @@
+/*this section is general for the whole website*/
+body{
+  background-color: #f5f5f5;
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: "Century Gothic";
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 52px;
+  color: #004B52;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+
+h3 {
+  font-family: "Century Gothic";
+  font-size: 25px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 45.5px;
+  color: #004B52;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+
+h2 {
+  font-family: "Century Gothic";
+  font-size: 35px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 45.5px;
+  color: #004B52;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+p {
+  font-family: "Century Gothic";
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  line-height: 28px;
+  color: #004B52;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+a {
+  color: #004B52;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #C0D5CC;
+  text-decoration: none;
+}
+/*MOBILE FIRST*/
+/*header section*/
+.aboutme{
+  grid-area: 'aboutme';
+  grid-row: 1/2;
+  grid-column: 3/4;
+  justify-self: center;
+}
+
+.portfolio{
+  grid-area: 'portfolio';
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: center;
+}
+
+.logo{
+  grid-area: 'logo';
+  width: 80;
+  grid-row: 2/3;
+  grid-column: 1/4;
+  justify-self: center;
+}
+
+.work{
+  grid-area: 'work';
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-self: center;
+}
+
+header{
+  display: grid;
+  grid-template-rows: 1fr 2.5fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  'work portfolio aboutme'
+  'logo logo logo';
+  background-color: #ffffff;
+}
+/*work presentation*/
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.my-work{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 0px;
+  grid-auto-rows: minmax(500px.auto);
+}
+
+ .heading-work{
+   padding-bottom: 200px;
+   padding-top: 150px;
+   padding-left: 1em;
+ }
+
+.work1{
+  padding: 1em;
+}
+
+.work2{
+  padding: 1em;
+}
+
+.work3{
+  padding: 1em;
+}
+
+.work3>iframe{
+  width: 100%;
+  height: 315px;
+}
+/*quote styling*/
+.quote{
+  background-color: #C0D5CC;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: space-around;
+  padding: 20%;
+}
+/*Footer styling*/
+.footer{
+  display: flex;
+  justify-self: center;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer>img{
+  max-width: 40px;
+  margin-bottom: -50px;
+}
+/*About page*/
+.about-me-header{
+  padding-bottom: 150px;
+  padding-top: 100px;
+}
+
+.skills{
+  display: grid;
+  margin: 10%;
+  background-color: #C0D5CC;
+  text-align: center;
+}
+/*Contact form*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: vertical;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 100;
+  line-height: 10px;
+  color: #004B52;
+}
+
+input[type=done] {
+  background-color: #7D9997;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=done]:hover {
+  background-color: #00383D;
+}
+
+.contact{
+  max-width: 700px;
+  margin: auto;
+  justify-self: center;
+}
+
+.contact>.container>p{
+  text-align: center;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #C0D5CC;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.container>form>textarea{
+  height: 200px;
+}
+/*Tablet screens*/
+@media screen and (min-width: 600px){
+/*navigation styling*/
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    float: none;
+    width: 100%;
+  }
+
+  .work{
+    order: 2;
+    margin: 2%;
+  }
+
+  .aboutme{
+    order:4;
+    margin: 2%;
+  }
+
+  .portfolio{
+    order: 3;
+    margin: 2%;
+  }
+
+  .logo{
+    order: 1;
+    margin-right: 17%;
+  }
+
+.logo>a>img{
+  height: 100px;
+  width: auto;
+}
+/*article styling*/
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .my-work{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(500px.auto);
+  }
+
+  .quote{
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+@media screen and (min-width: 1000px){
+  /*work styling for pc screens*/
+  .my-work{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(500px.auto);
+  }
+
+  .quote{
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  /*styling of about and contact*/
+  content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(200px.auto);
+  }
+
+  .img1{
+    grid-column: 1/2;
+  }
+
+  .img2{
+    grid-column: 1/2;
+  }
+
+  .img3{
+    grid-column: 1/2;
+  }
+
+  .paragraph{
+    grid-column: 2/3;
+  }
+
+  article{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: minmax(200px.auto);
+  }
+}
